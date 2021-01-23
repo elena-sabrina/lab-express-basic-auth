@@ -1,14 +1,15 @@
-const path = require("path");
+const { join } = require("path");
 const express = require("express");
 const createError = require("http-errors");
 const logger = require("morgan");
 const sassMiddleware = require("node-sass-middleware");
 const serveFavicon = require("serve-favicon");
-const connectMongo = require("connect-mongo");
-const MongoStore = connectMongo("expressSession");
-const mongoose = require("mongoose");
+//const connectMongo = require("connect-mongo");
+//const MongoStore = connectMongo("expressSession");
+//const mongoose = require("mongoose");
 
-const authenticationRouter = require("./routers/authentication");
+const indexRouter = require("./routes/index");
+const authenticationRouter = require("./routes/authentication");
 
 //const User = require("./models/user");
 
@@ -18,7 +19,7 @@ const app = express();
 app.set("views", join(__dirname, "views"));
 app.set("view engine", "hbs");
 
-app.use(
+/* app.use(
   expressSession({
     secret: process.env.SESSION_SECRET,
     //Cookie related options
@@ -33,7 +34,7 @@ app.use(
       ttl: 60 * 60
     })
   })
-);
+);*/
 
 app.use(express.static(join(__dirname, "public")));
 app.use(serveFavicon(join(__dirname, "public/images", "favicon.ico")));
@@ -51,12 +52,10 @@ app.use(
   })
 );
 
-
-//app.get (..home)
 //app.get (..profile)
 
-
 //Mount routers
+app.use("/authentication", authenticationRouter);
 app.use("/", indexRouter);
 
 // Catch missing routes and forward to error handler
