@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'style-authentication.scss';
+@import "variables";
+@import "style-authentication.scss";
 
 body {
   margin: 0;
@@ -8,21 +8,32 @@ body {
 }
 
 nav {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
-
 }
 a {
   color: #00b7ff;
   text-decoration: none;
 }
 
-button{
+button {
   border: none;
   background: none;
   color: #00b7ff;
   font: inherit;
 }
 
+img {
+  width: 100%;
+}
 
-sourceMappingURL=style.css.map
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header a {
+  color:  #9ee3ff;
+}
+/*sourceMappingURL=style.css.map*/

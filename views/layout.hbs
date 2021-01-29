@@ -9,7 +9,7 @@
       <a href="/">Home</a>
       {{#if user}}
       <a href="/profile">{{user.name}}</a>
-      <form method="POST" action="/authentication/log-out">
+      <form method="POST" action="/">
           <button>Log Out</button>
       </form>
       {{else}}
