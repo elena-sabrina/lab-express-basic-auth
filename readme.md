@@ -1,3 +1,28 @@
+
+VIEWS
+
+Home
+Profile
+Sign Up
+Sign In
+
+
+ROUTE HANDLERS
+
+GET - '/' - Home view
+GET - '/profile' - Displays the profile of the currently authenticated user
+GET - '/authentication/sign-up' - Displays registration form
+POST - '/authentication/sign-up' - Handle registration requests
+GET - '/authentication/sign-in' - Displays sign in form
+POST - '/authentication/sign-in' - Handle sign in requests
+POST - '/authentication/sign-out' - Handle sign out request
+
+USER MODEL 
+
+- name
+- email
+- password???
+
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
 # Basic Auth

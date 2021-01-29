@@ -2,14 +2,20 @@
 <html>
   <head>
     <title>Lab Express Basic Authentication</title>
-    <link rel='stylesheet' href='/styles/style.css' />
+    <link rel='stylesheet' href='/styles/main.css' />
   </head>
   <body>
     <nav>
       <a href="/">Home</a>
+      {{#if user}}
+      <a href="/profile">{{user.name}}</a>
+      <form method="POST" action="/authentication/log-out">
+          <button>Log Out</button>
+      </form>
+      {{else}}
       <a href="/authentication/sign-up">Sign-up</a>
       <a href="/authentication/sign-in">Sign-in</a>
-      <a href="/profile">Profile</a>
+      {{/if}}
     </nav>
     {{{body}}}
   </body>

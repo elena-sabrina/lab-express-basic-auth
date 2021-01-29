@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'style-authentication.scss';
+
+body {
+  margin: 0;
+  padding: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+nav {
+  display: flex; 
+  justify-content: space-between;
+
+}
+a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  background: none;
+  color: #00b7ff;
+  font: inherit;
+}
+
+
+sourceMappingURL=style.css.map
